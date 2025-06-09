@@ -1,12 +1,53 @@
-# React + Vite
+# Skip Selection Webpage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React-based webpage built with Vite by METE CIVELEK, designed to display a list of skips with their details in an accordion-style layout. The design and functionality aim to provide a user-friendly experience while maintaining responsiveness and smooth animations.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **List View Layout**:
 
-## Expanding the ESLint configuration
+    -   The skips are displayed in a list view instead of a grid view to differentiate from the original page, which was already in a grid format.
+    -   Each list item is presented in an accordion form, allowing users to expand and view additional details.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   **Accordion Dropdown**:
+
+    -   The accordion dropdown reveals details and warnings about each skip.
+    -   Key information such as the skip's name (length) and price is always visible without needing to expand the accordion.
+
+-   **Dark Blue Theme**:
+
+    -   The page features a dark blue theme for the background and primary elements.
+    -   Buttons and price text are styled with vibrant colors corresponding to their context for better visibility and user interaction.
+
+-   **Hover Effects and Smooth Transitions**:
+
+    -   Buttons and cards include hover effects that change their colors dynamically.
+    -   All animations, including hover effects, have smooth transitions for a polished user experience.
+
+-   **Dynamic Data from API**:
+
+    -   The skip data is fetched dynamically from the provided API, ensuring the information is always up-to-date.
+    -   No hardcoded data is used for the skips.
+
+-   **Placeholder Images**:
+
+    -   Since the API does not provide photos of the skips, SVGs are used as placeholders for the images.
+
+-   **Responsive Design**:
+
+    -   The webpage is fully responsive and works seamlessly on devices with a width of 320px and above.
+    -   Starting from 768px and above, the layout of each card is adjusted to make the design more visually appealing for mobile resolutions.
+
+-   **Expandable Details**:
+    -   Some details sections may appear empty due to limited information provided by the API, but they can easily be populated with additional data if available.
+
+## Technologies Used
+
+-   **React**: For building the user interface.
+-   **Vite**: For fast development and build processes.
+-   **TAILWINDCSS**: For styling, including hover effects, transitions, and responsive design.
+-   **API Integration**: To fetch skip data dynamically.
+
+## Project Link
+
+https://rem-waste-test-eight.vercel.app/

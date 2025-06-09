@@ -23,6 +23,7 @@ function Products() {
 				<ul>
 					{skips.map((skip) => (
 						<li
+							id={`skip-${skip.id}`} // Ensure the id is properly assigned
 							key={skip.id}
 							className="bg-slate-800 border-1 border-[#475569] rounded-lg flex flex-col justify-between items-center p-4 mb-4 hover:border-blue-500 hover:shadow-md transition-all duration-200
 "
@@ -52,7 +53,7 @@ function Products() {
 										className="w-full flex justify-center rounded-lg mb-4 md:max-w-3/8"
 										style={{
 											background:
-												"radial-gradient(circle, rgba(104, 122, 156, 1) 0%, rgba(17, 55, 102, 1) 100%)",
+												"radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgba(91, 102, 90, 1) 80%)",
 											minHeight: "120px",
 										}}
 									>
@@ -143,14 +144,16 @@ function Products() {
 										openSkipId === skip.id ? null : skip.id
 									);
 
-									// Scroll into view when opening details
 									if (openSkipId !== skip.id) {
-										document
-											.getElementById(`skip-${skip.id}`)
-											.scrollIntoView({
+										const element = document.getElementById(
+											`skip-${skip.id}`
+										);
+										if (element) {
+											element.scrollIntoView({
 												behavior: "smooth",
-												block: "end",
+												block: "nearest",
 											});
+										}
 									}
 								}}
 							>
